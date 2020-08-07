@@ -1,0 +1,6 @@
+C:\Users\sulea\source\repos\BookLaunch.ObjectProject\BooksClassLibrary.ObjectProject\bin\Debug\BooksClassLibrary.ObjectProject.dll
+C:\Users\sulea\source\repos\BookLaunch.ObjectProject\BooksClassLibrary.ObjectProject\bin\Debug\BooksClassLibrary.ObjectProject.pdb
+C:\Users\sulea\source\repos\BookLaunch.ObjectProject\BooksClassLibrary.ObjectProject\obj\Debug\BooksClassLibrary.ObjectProject.csprojAssemblyReference.cache
+C:\Users\sulea\source\repos\BookLaunch.ObjectProject\BooksClassLibrary.ObjectProject\obj\Debug\BooksClassLibrary.ObjectProject.csproj.CoreCompileInputs.cache
+C:\Users\sulea\source\repos\BookLaunch.ObjectProject\BooksClassLibrary.ObjectProject\obj\Debug\BooksClassLibrary.ObjectProject.dll
+C:\Users\sulea\source\repos\BookLaunch.ObjectProject\BooksClassLibrary.ObjectProject\obj\Debug\BooksClassLibrary.ObjectProject.pdb

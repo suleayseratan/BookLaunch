@@ -1,0 +1,244 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Page.master.cs" Inherits="BookLaunch.ObjectProject.Page" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Home | Bookshop Responsive Bootstrap4 Template</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Icon -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="Sule's Web Project/images/favicon.ico">
+    <link rel="apple-touch-icon" href="Sule's Web Project/images/icon.png">
+
+    <!-- Google font (font-family: 'Roboto', sans-serif; Poppins ; Satisfy) -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,600,600i,700,700i,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="Sule's Web Project/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Sule's Web Project/css/bootstrap.css">
+    <link rel="stylesheet" href="Sule's Web Project/css/plugins.css">
+    <link rel="stylesheet" href="Sule's Web Project/css/style.css">
+	<link rel="stylesheet" href="Sule's Web Project/css/mystyle.css" />
+
+          <!-- Custom css -->
+    <link rel="stylesheet" href="Sule's Web Project/css/custom.css">
+
+    <!-- Modernizer js -->
+    <script src="Sule's Web Project/js/vendor/modernizr-3.5.0.min.js"></script>
+
+    <!-- My Script -->
+    <script src="Sule's Web Project/js/script.js"></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+<form id="Sule" runat="server">
+    
+        <div class="wrapper" id="wrapper">
+		<!-- Header -->
+		<header id="wn__header" class="header__area header__absolute sticky__header">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-6 col-sm-6 col-6 col-lg-1">
+					<div class="logo">
+						<a href=Default.aspx>
+							<img src="Sule's Web Project/images/logo/logo.png" alt="logo images">
+						</a>
+					</div>
+				</div>
+				<div class="col-lg-8 d-none d-lg-block">
+					<nav class="mainmenu__nav">
+						<ul class="meninmenu d-flex justify-content-start">
+							<li class="drop with--one--item"><a href=Default.aspx>Home</a></li>
+							<li class="drop"><a href="Books.aspx">Books</a>
+                                <div class="megamenu mega02">
+                                    <ul class="item item02">
+                                        <li class="title">Categories</li>
+                                        <asp:Repeater ID="rptCategories" runat="server">
+                                            <ItemTemplate>
+                                                <li><a href="Books.aspx?categoryId=<%# Eval("CategoryId") %>"><%# Eval("CategoryName")%></a></li>
+                                            </ItemTemplate>
+                                        </asp:Repeater>
+                                    </ul>
+                                    <ul class="item02 item" style="margin-top: 45px;">
+                                        <asp:Repeater ID="rptCategories2" runat="server">
+											<ItemTemplate>
+                                            <li><a href="Books.aspx?categoryId=<%# Eval("CategoryId") %>"><%# Eval("CategoryName")%></a></li>
+                                            </ItemTemplate>
+                                        </asp:Repeater>
+                                    </ul>   
+                                    
+								</div>
+							</li>
+							<li class="drop"><a href="Author.aspx">Author</a></li>
+							<li class="drop"><a href="Quotations.aspx">Quotations</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+						</ul>
+					</nav>
+				</div>
+				<asp:ContentPlaceHolder runat="server" ID="searchPlaceholder">
+				<div class="col-md-6 col-sm-6 col-6 col-lg-3">
+					<ul class="header__sidebar__right d-flex justify-content-end align-items-center">
+						<li class="shop_search md-form">
+							<!-- Search form -->
+							<span class="form-inline d-flex justify-content-center md-form form-sm" runat="server">
+                               
+                                <asp:TextBox runat="server" ID="tbxSearch" class="form-control form-control-sm mr-3 w-75 " AutoPostBack="True" />
+                                <i class="fas fa-search fa-lg" aria-hidden="true"></i>
+                            </span>
+							<!-- Search form -->
+						</li>
+						<li class="wishlist"><a href="ReadingList.aspx"></a></li>
+						<li class="setting__bar__icon"><a class="setting__active" href="#"></a>
+							<div class="searchbar__content setting__block">
+								<div class="content-inner">
+									<div class="switcher-currency">
+										<strong class="label switcher-label">
+											<span>My Account</span>
+										</strong>
+										<div class="switcher-options">
+											<div class="switcher-currency-trigger">
+												<div class="setting__menu">
+													<span><a href="#">Sign In</a></span>
+													<span><a href="my-account.html">My Account</a></span>
+													<span><a href="#">Compare Product</a></span>
+													<span><a href="#">My Reading List</a></span>
+													<span><a href="#">Create An Account</a></span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+
+					</ul>
+				</div>
+                </asp:ContentPlaceHolder>
+			</div>
+			<!-- Start Mobile Menu -->
+			<div class="row d-none">
+				<div class="col-lg-12 d-none">
+					<nav class="mobilemenu__nav">
+						<ul class="meninmenu">
+							<li><a href=Default.aspx>Home</a></li>
+							<li><a href="#">Pages</a>
+								<ul>
+									<li><a href="about.html">About Page</a></li>
+									<li><a href="portfolio.html">Portfolio</a>
+										<ul>
+											<li><a href="portfolio.html">Portfolio</a></li>
+											<li><a href="portfolio-details.html">Portfolio Details</a></li>
+										</ul>
+									</li>
+									<li><a href="my-account.html">My Account</a></li>
+									<li><a href="cart.html">Cart Page</a></li>
+									<li><a href="checkout.html">Checkout Page</a></li>
+									<li><a href="ReadingList.aspx">Reading List Page</a></li>
+                                </ul>
+							</li>
+							<li><a href="blog.html">Blog</a>
+								<ul>
+									<li><a href="blog.html">Blog Page</a></li>
+									<li><a href="blog-details.html">Blog Details</a></li>
+								</ul>
+							</li>
+							<li><a href="contact.html">Contact</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+			<!-- End Mobile Menu -->
+			<div class="mobile-menu d-block d-lg-none">
+			</div>
+			<!-- Mobile Menu -->
+		</div>
+	</header>
+            <asp:ContentPlaceHolder ID="slider" runat="server">
+            <div class="slider-area brown__nav slider--15 slide__activation slide__arrow01 owl-carousel owl-theme">
+                <!-- Start Single Slide -->
+                <div class="slide animation__style10 bg-image--1 fullscreen align__center--left">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="slider__content">
+                                    <div class="contentbox">
+                                        <h2>Look <span>your </span></h2>
+                                        <h2>favourite <span>Book </span></h2>
+                                        <h2>from <span>Here </span></h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Single Slide -->
+                <!-- Start Single Slide -->
+                <div class="slide animation__style10 bg-image--7 fullscreen align__center--left">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="slider__content">
+                                    <div class="contentbox">
+                                        <h2>Look <span>your </span></h2>
+                                        <h2>favourite <span>Book </span></h2>
+                                        <h2>from <span>Here </span></h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Single Slide -->
+            </div>
+            </asp:ContentPlaceHolder>
+		<!-- //Header -->
+		<!-- Start Search Popup -->
+            <asp:ContentPlaceHolder ID="main" runat="server">
+            </asp:ContentPlaceHolder>
+		<!-- End Search Popup -->
+		
+		<!-- Footer Area -->
+		<footer id="wn__footer" class="footer__area bg__cat--8 brown--color">
+			<div class="footer-static-top">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="footer__widget footer__menu">
+								<div class="ft__logo">
+									<a href=Default.aspx>
+										<img src="Sule's Web Project/images/logo/3.png" alt="logo">
+									</a>
+									<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered duskam alteration variations of passages</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</footer>
+		<!-- //Footer Area -->
+		
+	</div>
+</form>
+<script src="Sule's Web Project/js/vendor/jquery-3.2.1.min.js"></script>
+<script src="Sule's Web Project/js/popper.min.js"></script>
+<script src="Sule's Web Project/js/bootstrap.min.js"></script>
+<script src="Sule's Web Project/js/plugins.js"></script>
+<script src="Sule's Web Project/js/active.js"></script>
+</body>
+</html>

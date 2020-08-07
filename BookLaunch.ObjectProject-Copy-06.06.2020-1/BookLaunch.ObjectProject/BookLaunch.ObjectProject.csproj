@@ -1,0 +1,487 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.0\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{168A93C1-9BC0-42EC-B835-9C88270C47F1}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BookLaunch.ObjectProject</RootNamespace>
+    <AssemblyName>BookLaunch.ObjectProject</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44370</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Author.aspx" />
+    <Content Include="AuthorDetails.aspx" />
+    <Content Include="Books.aspx" />
+    <Content Include="Contact.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Deneme.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Quotations.aspx" />
+    <Content Include="ReadingList.aspx" />
+    <Content Include="SingleBook.aspx" />
+    <Content Include="Sule%27s Web Project\.idea\misc.xml" />
+    <Content Include="Sule%27s Web Project\.idea\modules.xml" />
+    <Content Include="Sule%27s Web Project\.idea\workspace.xml" />
+    <Content Include="Sule%27s Web Project\author-details.html" />
+    <Content Include="Sule%27s Web Project\author.html" />
+    <Content Include="Sule%27s Web Project\blog-details.html" />
+    <Content Include="Sule%27s Web Project\blog.html" />
+    <Content Include="Sule%27s Web Project\books.html" />
+    <Content Include="Sule%27s Web Project\contact.html" />
+    <Content Include="Sule%27s Web Project\css\mystyle.css" />
+    <Content Include="Sule%27s Web Project\css\bootstrap.css" />
+    <Content Include="Sule%27s Web Project\css\bootstrap.min.css" />
+    <Content Include="Sule%27s Web Project\css\custom.css" />
+    <Content Include="Sule%27s Web Project\css\plugins.css" />
+    <Content Include="Sule%27s Web Project\css\plugins\animation.css" />
+    <Content Include="Sule%27s Web Project\css\plugins\bicon.min.css" />
+    <Content Include="Sule%27s Web Project\css\plugins\fakeloader.css" />
+    <Content Include="Sule%27s Web Project\css\plugins\fancybox.css" />
+    <Content Include="Sule%27s Web Project\css\plugins\font-awesome.min.css" />
+    <Content Include="Sule%27s Web Project\css\plugins\fotorama.css" />
+    <Content Include="Sule%27s Web Project\css\plugins\jquery-ui.min.css" />
+    <Content Include="Sule%27s Web Project\css\plugins\lightbox.css" />
+    <Content Include="Sule%27s Web Project\css\plugins\mainmenu.css" />
+    <Content Include="Sule%27s Web Project\css\plugins\material-design-iconic-font.min.css" />
+    <Content Include="Sule%27s Web Project\css\plugins\nivo-preview-2.css" />
+    <Content Include="Sule%27s Web Project\css\plugins\nivo-slider.css" />
+    <Content Include="Sule%27s Web Project\css\plugins\owl.carousel.min.css" />
+    <Content Include="Sule%27s Web Project\css\plugins\owl.theme.default.min.css" />
+    <Content Include="Sule%27s Web Project\css\plugins\pe-icon-7-stroke.css" />
+    <Content Include="Sule%27s Web Project\css\plugins\simple-line-icons.css" />
+    <Content Include="Sule%27s Web Project\css\plugins\slick.min.css" />
+    <Content Include="Sule%27s Web Project\css\style.css" />
+    <Content Include="Sule%27s Web Project\fonts\bicon.svg" />
+    <Content Include="Sule%27s Web Project\fonts\fontawesome-webfont.svg" />
+    <Content Include="Sule%27s Web Project\fonts\Simple-Line-Icons.svg" />
+    <Content Include="Sule%27s Web Project\fonts\slick.svg" />
+    <Content Include="Sule%27s Web Project\images\author\AnthonyDoerr.jpg" />
+    <Content Include="Sule%27s Web Project\images\author\BigMarkusZusak.jpg" />
+    <Content Include="Sule%27s Web Project\images\author\CharlotteBronte.jpg" />
+    <Content Include="Sule%27s Web Project\images\author\FScottFitzgerald.jpg" />
+    <Content Include="Sule%27s Web Project\images\author\GeorgeRRMartin.jpg" />
+    <Content Include="Sule%27s Web Project\images\author\HarperLee.jpg" />
+    <Content Include="Sule%27s Web Project\images\author\JaneAusten.jpg" />
+    <Content Include="Sule%27s Web Project\images\author\JhonGreen.jpg" />
+    <Content Include="Sule%27s Web Project\images\author\LisaGenova.jpg" />
+    <Content Include="Sule%27s Web Project\images\author\MarkusZusak.jpg" />
+    <Content Include="Sule%27s Web Project\images\author\PauloCoelho.jpg" />
+    <Content Include="Sule%27s Web Project\images\author\RosalieHam.jpg" />
+    <Content Include="Sule%27s Web Project\images\author\SabahattinAli.jpg" />
+    <Content Include="Sule%27s Web Project\images\author\SuzanneCollins.jpg" />
+    <Content Include="Sule%27s Web Project\images\author\VeronicaRoth.jpg" />
+    <Content Include="Sule%27s Web Project\images\bg\bg1.jpg" />
+    <Content Include="Sule%27s Web Project\images\bg\bg2.jpg" />
+    <Content Include="Sule%27s Web Project\images\bg\bg3.jpg" />
+    <Content Include="Sule%27s Web Project\images\bg\bg4.jpg" />
+    <Content Include="Sule%27s Web Project\images\bg\bg5.jpg" />
+    <Content Include="Sule%27s Web Project\images\bg\DefaultImage.jpg" />
+    <Content Include="Sule%27s Web Project\images\bg\HI.jpeg" />
+    <Content Include="Sule%27s Web Project\images\books\AllTheLightWeCannotSee.jpg" />
+    <Content Include="Sule%27s Web Project\images\books\EveryNotePlayed.jpg" />
+    <Content Include="Sule%27s Web Project\images\books\FireBlood.jpg" />
+    <Content Include="Sule%27s Web Project\images\books\GoSetAWatchman.jpg" />
+    <Content Include="Sule%27s Web Project\images\books\IronEarthCopperSky.jpg" />
+    <Content Include="Sule%27s Web Project\images\books\JaneEyre.jpg" />
+    <Content Include="Sule%27s Web Project\images\books\MadonnaInAFurCoat.jpg" />
+    <Content Include="Sule%27s Web Project\images\books\TheBookThief.jpg" />
+    <Content Include="Sule%27s Web Project\images\books\ToKillAMockingbird.jpg" />
+    <Content Include="Sule%27s Web Project\images\DENEME.jpg" />
+    <Content Include="Sule%27s Web Project\images\about\big-img\1.jpg" />
+    <Content Include="Sule%27s Web Project\images\about\big-img\2.jpg" />
+    <Content Include="Sule%27s Web Project\images\about\team\1.jpg" />
+    <Content Include="Sule%27s Web Project\images\about\team\2.jpg" />
+    <Content Include="Sule%27s Web Project\images\about\team\3.jpg" />
+    <Content Include="Sule%27s Web Project\images\about\team\4.jpg" />
+    <Content Include="Sule%27s Web Project\images\about\team\5.jpg" />
+    <Content Include="Sule%27s Web Project\images\about\team\6.jpg" />
+    <Content Include="Sule%27s Web Project\images\ajax-loader.gif" />
+    <Content Include="Sule%27s Web Project\images\best-sell-product\1.jpg" />
+    <Content Include="Sule%27s Web Project\images\best-sell-product\2.jpg" />
+    <Content Include="Sule%27s Web Project\images\best-sell-product\3.jpg" />
+    <Content Include="Sule%27s Web Project\images\best-sell-product\4.jpg" />
+    <Content Include="Sule%27s Web Project\images\best-sell-product\5.jpg" />
+    <Content Include="Sule%27s Web Project\images\best-sell-product\6.jpg" />
+    <Content Include="Sule%27s Web Project\images\best-sell-product\7.jpg" />
+    <Content Include="Sule%27s Web Project\images\best-sell-product\8.jpg" />
+    <Content Include="Sule%27s Web Project\images\blog\big-img\1.jpg" />
+    <Content Include="Sule%27s Web Project\images\blog\blog-3\1.jpg" />
+    <Content Include="Sule%27s Web Project\images\blog\blog-3\2.jpg" />
+    <Content Include="Sule%27s Web Project\images\blog\blog-3\3.jpg" />
+    <Content Include="Sule%27s Web Project\images\blog\blog-3\4.jpg" />
+    <Content Include="Sule%27s Web Project\images\blog\blog-3\5.jpg" />
+    <Content Include="Sule%27s Web Project\images\blog\comment\1.jpeg" />
+    <Content Include="Sule%27s Web Project\images\blog\sm-img\1.jpg" />
+    <Content Include="Sule%27s Web Project\images\blog\sm-img\2.jpg" />
+    <Content Include="Sule%27s Web Project\images\blog\sm-img\3.jpg" />
+    <Content Include="Sule%27s Web Project\images\blog\sm-img\4.jpg" />
+    <Content Include="Sule%27s Web Project\images\blog\sm-img\5.jpg" />
+    <Content Include="Sule%27s Web Project\images\brand\1.png" />
+    <Content Include="Sule%27s Web Project\images\brand\2.png" />
+    <Content Include="Sule%27s Web Project\images\brand\3.png" />
+    <Content Include="Sule%27s Web Project\images\brand\4.png" />
+    <Content Include="Sule%27s Web Project\images\brand\5.png" />
+    <Content Include="Sule%27s Web Project\images\brand\6.png" />
+    <Content Include="Sule%27s Web Project\images\brand\7.png" />
+    <Content Include="Sule%27s Web Project\images\fancybox\blank.gif" />
+    <Content Include="Sule%27s Web Project\images\fancybox\fancybox_loading%402x.gif" />
+    <Content Include="Sule%27s Web Project\images\fancybox\fancybox_loading.gif" />
+    <Content Include="Sule%27s Web Project\images\fancybox\fancybox_overlay.png" />
+    <Content Include="Sule%27s Web Project\images\fancybox\fancybox_sprite%402x.png" />
+    <Content Include="Sule%27s Web Project\images\fancybox\fancybox_sprite.png" />
+    <Content Include="Sule%27s Web Project\images\favicon.ico" />
+    <Content Include="Sule%27s Web Project\images\icon.png" />
+    <Content Include="Sule%27s Web Project\images\icons\blog-link-post2.png" />
+    <Content Include="Sule%27s Web Project\images\icons\box.png" />
+    <Content Include="Sule%27s Web Project\images\icons\button-compare.png" />
+    <Content Include="Sule%27s Web Project\images\icons\button-email.png" />
+    <Content Include="Sule%27s Web Project\images\icons\button-wishlist.png" />
+    <Content Include="Sule%27s Web Project\images\icons\button-wishlist_white.png" />
+    <Content Include="Sule%27s Web Project\images\icons\cart.png" />
+    <Content Include="Sule%27s Web Project\images\icons\cart1.png" />
+    <Content Include="Sule%27s Web Project\images\icons\cart2.png" />
+    <Content Include="Sule%27s Web Project\images\icons\cart3.png" />
+    <Content Include="Sule%27s Web Project\images\icons\cart4.png" />
+    <Content Include="Sule%27s Web Project\images\icons\cart_white.png" />
+    <Content Include="Sule%27s Web Project\images\icons\close.png" />
+    <Content Include="Sule%27s Web Project\images\icons\compare.png" />
+    <Content Include="Sule%27s Web Project\images\icons\compare2.png" />
+    <Content Include="Sule%27s Web Project\images\icons\em.png" />
+    <Content Include="Sule%27s Web Project\images\icons\em2.png" />
+    <Content Include="Sule%27s Web Project\images\icons\fotorama%402x.png" />
+    <Content Include="Sule%27s Web Project\images\icons\fotorama.png" />
+    <Content Include="Sule%27s Web Project\images\icons\icon_account.png" />
+    <Content Include="Sule%27s Web Project\images\icons\icon_account2.png" />
+    <Content Include="Sule%27s Web Project\images\icons\icon_cart2.png" />
+    <Content Include="Sule%27s Web Project\images\icons\icon_cart3.png" />
+    <Content Include="Sule%27s Web Project\images\icons\icon_search2.png" />
+    <Content Include="Sule%27s Web Project\images\icons\icon_search3.png" />
+    <Content Include="Sule%27s Web Project\images\icons\icon_setting.png" />
+    <Content Include="Sule%27s Web Project\images\icons\icon_setting_white.png" />
+    <Content Include="Sule%27s Web Project\images\icons\icon_title.png" />
+    <Content Include="Sule%27s Web Project\images\icons\icon_title2.png" />
+    <Content Include="Sule%27s Web Project\images\icons\icon_title3.png" />
+    <Content Include="Sule%27s Web Project\images\icons\lc.png" />
+    <Content Include="Sule%27s Web Project\images\icons\lc2.png" />
+    <Content Include="Sule%27s Web Project\images\icons\line_title.png" />
+    <Content Include="Sule%27s Web Project\images\icons\links_static.png" />
+    <Content Include="Sule%27s Web Project\images\icons\links_static2.png" />
+    <Content Include="Sule%27s Web Project\images\icons\links_static3.png" />
+    <Content Include="Sule%27s Web Project\images\icons\links_static4.png" />
+    <Content Include="Sule%27s Web Project\images\icons\links_static5.png" />
+    <Content Include="Sule%27s Web Project\images\icons\links_static6.png" />
+    <Content Include="Sule%27s Web Project\images\icons\links_static7.png" />
+    <Content Include="Sule%27s Web Project\images\icons\links_static8.png" />
+    <Content Include="Sule%27s Web Project\images\icons\loading.gif" />
+    <Content Include="Sule%27s Web Project\images\icons\nav_icon.png" />
+    <Content Include="Sule%27s Web Project\images\icons\next.png" />
+    <Content Include="Sule%27s Web Project\images\icons\payment.png" />
+    <Content Include="Sule%27s Web Project\images\icons\ph.png" />
+    <Content Include="Sule%27s Web Project\images\icons\ph2.png" />
+    <Content Include="Sule%27s Web Project\images\icons\plus.png" />
+    <Content Include="Sule%27s Web Project\images\icons\prev.png" />
+    <Content Include="Sule%27s Web Project\images\icons\product-info.png" />
+    <Content Include="Sule%27s Web Project\images\icons\search.png" />
+    <Content Include="Sule%27s Web Project\images\icons\search1.png" />
+    <Content Include="Sule%27s Web Project\images\icons\search2.png" />
+    <Content Include="Sule%27s Web Project\images\icons\search_white.png" />
+    <Content Include="Sule%27s Web Project\images\icons\wishlist.png" />
+    <Content Include="Sule%27s Web Project\images\icons\wishlist2.png" />
+    <Content Include="Sule%27s Web Project\images\logo\3.png" />
+    <Content Include="Sule%27s Web Project\images\logo\logo.png" />
+    <Content Include="Sule%27s Web Project\images\others\404.png" />
+    <Content Include="Sule%27s Web Project\images\others\banner_left.jpg" />
+    <Content Include="Sule%27s Web Project\images\others\toggle_close.png" />
+    <Content Include="Sule%27s Web Project\images\others\toggle_open.png" />
+    <Content Include="Sule%27s Web Project\images\png-img\headphone.png" />
+    <Content Include="Sule%27s Web Project\images\png-img\payment.png" />
+    <Content Include="Sule%27s Web Project\images\png-img\shipping.png" />
+    <Content Include="Sule%27s Web Project\images\portfolio\big-2\1.jpg" />
+    <Content Include="Sule%27s Web Project\images\portfolio\big-2\2.jpg" />
+    <Content Include="Sule%27s Web Project\images\portfolio\big-2\3.jpg" />
+    <Content Include="Sule%27s Web Project\images\portfolio\big-img\1.jpg" />
+    <Content Include="Sule%27s Web Project\images\portfolio\md-img\1.jpg" />
+    <Content Include="Sule%27s Web Project\images\portfolio\md-img\10.jpg" />
+    <Content Include="Sule%27s Web Project\images\portfolio\md-img\2.jpg" />
+    <Content Include="Sule%27s Web Project\images\portfolio\md-img\3.jpg" />
+    <Content Include="Sule%27s Web Project\images\portfolio\md-img\4.jpg" />
+    <Content Include="Sule%27s Web Project\images\portfolio\md-img\5.jpg" />
+    <Content Include="Sule%27s Web Project\images\portfolio\md-img\6.jpg" />
+    <Content Include="Sule%27s Web Project\images\portfolio\md-img\7.jpg" />
+    <Content Include="Sule%27s Web Project\images\portfolio\md-img\8.jpg" />
+    <Content Include="Sule%27s Web Project\images\portfolio\md-img\9.jpg" />
+    <Content Include="Sule%27s Web Project\images\pos-bg\3.jpeg" />
+    <Content Include="Sule%27s Web Project\images\product\1.jpg" />
+    <Content Include="Sule%27s Web Project\images\product\10.jpg" />
+    <Content Include="Sule%27s Web Project\images\product\11.jpg" />
+    <Content Include="Sule%27s Web Project\images\product\12.jpg" />
+    <Content Include="Sule%27s Web Project\images\product\2.jpg" />
+    <Content Include="Sule%27s Web Project\images\product\3.jpg" />
+    <Content Include="Sule%27s Web Project\images\product\4.jpg" />
+    <Content Include="Sule%27s Web Project\images\product\5.jpg" />
+    <Content Include="Sule%27s Web Project\images\product\6.jpg" />
+    <Content Include="Sule%27s Web Project\images\product\7.jpg" />
+    <Content Include="Sule%27s Web Project\images\product\8.jpg" />
+    <Content Include="Sule%27s Web Project\images\product\9.jpg" />
+    <Content Include="Sule%27s Web Project\images\product\big-img\1.jpg" />
+    <Content Include="Sule%27s Web Project\images\product\sm-3\1.jpg" />
+    <Content Include="Sule%27s Web Project\images\product\sm-3\2.jpg" />
+    <Content Include="Sule%27s Web Project\images\product\sm-3\3.jpg" />
+    <Content Include="Sule%27s Web Project\images\product\sm-img\1.jpg" />
+    <Content Include="Sule%27s Web Project\images\product\sm-img\2.jpg" />
+    <Content Include="Sule%27s Web Project\images\product\sm-img\3.jpg" />
+    <Content Include="Sule%27s Web Project\images\testimonial\1.png" />
+    <Content Include="Sule%27s Web Project\images\testimonial\2.png" />
+    <Content Include="Sule%27s Web Project\images\testimonial\3.png" />
+    <Content Include="Sule%27s Web Project\index.html" />
+    <Content Include="Sule%27s Web Project\js\active.js" />
+    <Content Include="Sule%27s Web Project\js\bootstrap.min.js" />
+    <Content Include="Sule%27s Web Project\js\plugins.js" />
+    <Content Include="Sule%27s Web Project\js\popper.min.js" />
+    <Content Include="Sule%27s Web Project\js\script.js" />
+    <Content Include="Sule%27s Web Project\js\vendor\jquery-3.2.1.min.js" />
+    <Content Include="Sule%27s Web Project\js\vendor\modernizr-3.5.0.min.js" />
+    <Content Include="Sule%27s Web Project\my-account.html" />
+    <Content Include="Sule%27s Web Project\portfolio-details.html" />
+    <Content Include="Sule%27s Web Project\portfolio.html" />
+    <Content Include="Sule%27s Web Project\quotations.html" />
+    <Content Include="Sule%27s Web Project\readinglist.html" />
+    <Content Include="Sule%27s Web Project\shop-grid.html" />
+    <Content Include="Sule%27s Web Project\single-product.html" />
+    <Content Include="Sule%27s Web Project\team.html" />
+    <Content Include="Sule%27s Web Project\wishlist.html" />
+    <Content Include="Web.config" />
+    <Content Include="WebForm1.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Author.aspx.cs">
+      <DependentUpon>Author.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Author.aspx.designer.cs">
+      <DependentUpon>Author.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AuthorDetails.aspx.cs">
+      <DependentUpon>AuthorDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AuthorDetails.aspx.designer.cs">
+      <DependentUpon>AuthorDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Books.aspx.cs">
+      <DependentUpon>Books.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Books.aspx.designer.cs">
+      <DependentUpon>Books.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Deneme.aspx.cs">
+      <DependentUpon>Deneme.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Deneme.aspx.designer.cs">
+      <DependentUpon>Deneme.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Page.Master.cs">
+      <DependentUpon>Page.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page.Master.designer.cs">
+      <DependentUpon>Page.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Quotations.aspx.cs">
+      <DependentUpon>Quotations.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quotations.aspx.designer.cs">
+      <DependentUpon>Quotations.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReadingList.aspx.cs">
+      <DependentUpon>ReadingList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReadingList.aspx.designer.cs">
+      <DependentUpon>ReadingList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SingleBook.aspx.cs">
+      <DependentUpon>SingleBook.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SingleBook.aspx.designer.cs">
+      <DependentUpon>SingleBook.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="Sule%27s Web Project\.idea\Sule%27s Web Project.iml" />
+    <Content Include="Sule%27s Web Project\fonts\bicon.eot" />
+    <Content Include="Sule%27s Web Project\fonts\bicon.ttf" />
+    <Content Include="Sule%27s Web Project\fonts\bicon.woff" />
+    <Content Include="Sule%27s Web Project\fonts\fontawesome-webfont-1.eot" />
+    <Content Include="Sule%27s Web Project\fonts\fontawesome-webfont.eot" />
+    <Content Include="Sule%27s Web Project\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Sule%27s Web Project\fonts\fontawesome-webfont.woff" />
+    <Content Include="Sule%27s Web Project\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Sule%27s Web Project\fonts\Material-Design-Iconic-Font.woff2" />
+    <Content Include="Sule%27s Web Project\fonts\Simple-Line-Icons.eot" />
+    <Content Include="Sule%27s Web Project\fonts\Simple-Line-Icons.ttf" />
+    <Content Include="Sule%27s Web Project\fonts\Simple-Line-Icons.woff" />
+    <Content Include="Sule%27s Web Project\fonts\Simple-Line-Icons.woff2" />
+    <Content Include="Sule%27s Web Project\fonts\slick-1.eot" />
+    <Content Include="Sule%27s Web Project\fonts\slick.eot" />
+    <Content Include="Sule%27s Web Project\fonts\slick.ttf" />
+    <Content Include="Sule%27s Web Project\fonts\slick.woff" />
+    <Content Include="Page.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BookLaunch.ClassLibrary\BookLaunch.ClassLibrary.csproj">
+      <Project>{a0d1fc5d-11eb-487a-9cb7-20765c748cf2}</Project>
+      <Name>BookLaunch.ClassLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BookLaunch.DataLayer\BookLaunch.DataLayer.csproj">
+      <Project>{c80f057d-50e6-4fd8-94c1-545f72828539}</Project>
+      <Name>BookLaunch.DataLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>56295</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44370/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.0\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
